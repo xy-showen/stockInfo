@@ -1,0 +1,19 @@
+{
+  "name": "stockinfo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Showen",
+  "license": "ISC",
+  "dependencies": {
+    "iconv": "^2.2.0",
+    "iconv-lite": "^0.4.13",
+    "moment": "^2.13.0",
+    "mysql": "^2.11.1",
+    "request": "^2.72.0",
+    "underscore": "^1.8.3"
+  }
+}
