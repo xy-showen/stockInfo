@@ -8,7 +8,7 @@ module.exports = exports = function initMysql( cb ){
         if( err )
           console.log( 'connect mysql err' + err );
         else
-          console.log( 'connect mysql success.' );
+          console.log( "connect mysql " + conf.mysql.host + " success." );
     });
     cb && cb();
 };

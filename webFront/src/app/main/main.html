@@ -1,0 +1,55 @@
+<div class="container">
+
+  <div class="row">
+    <div class="col-md-3">
+      <daterangepicker ng-model="main.daterangepicker" ng-change="main.change()"></daterangepicker>
+    </div>
+    <div class="col-md-4">
+      <input class="form-control" placeholder="输入股票名称或代码或机构名称" ng-model="main.stock" ng-change="main.change()">
+    </div>
+    <div class="col-md-1">
+      <!--<button type="button" class="btn btn-primary" ng-click="main.findStocks()">查询</button>-->
+    </div>
+  </div>
+  <div>
+    <br>
+  </div>
+  </div>
+  <div>
+    <table class="table table-bordered">
+      <thead>
+      <tr md-row>
+        <th md-column><span>时间</span></th>
+        <th md-column><span>股票</span></th>
+        <th md-column>机构1(买)</th>
+        <th md-column>机构2(买)</th>
+        <th md-column>机构3(买)</th>
+        <th md-column>机构4(买)</th>
+        <th md-column>机构5(买)</th>
+        <th md-column>机构1(卖)</th>
+        <th md-column>机构2(卖)</th>
+        <th md-column>机构3(卖)</th>
+        <th md-column>机构4(卖)</th>
+        <th md-column>机构5(卖)</th>
+      </tr>
+      </thead>
+      <tbody md-body>
+      <tr md-row ng-repeat="stock in main.finsStocks">
+        <td md-cell>{{ stock.date }}</td>
+        <td md-cell ng-class="{ red:main.stock==stock.name }">{{ stock.name }}</td>
+        <td md-cell ng-class="{ red:main.stock==stock.organization1 }">{{ stock.organization1 }}({{ stock.buy1/1000 }}万)</td>
+        <td md-cell ng-class="{ red:main.stock==stock.organization2 }">{{ stock.organization2 }}({{ stock.buy2/1000 }}万)</td>
+        <td md-cell ng-class="{ red:main.stock==stock.organization3 }">{{ stock.organization3 }}({{ stock.buy3/1000 }}万)</td>
+        <td md-cell ng-class="{ red:main.stock==stock.organization4 }">{{ stock.organization4 }}({{ stock.buy4/1000 }}万)</td>
+        <td md-cell ng-class="{ red:main.stock==stock.organization5 }">{{ stock.organization5 }}({{ stock.buy5/1000 }}万)</td>
+        <td md-cell ng-class="{ red:main.stock==stock.organization6 }">{{ stock.organization6 }}({{ stock.sell6/1000 }}万)</td>
+        <td md-cell ng-class="{ red:main.stock==stock.organization7 }">{{ stock.organization7 }}({{ stock.sell7/1000 }}万)</td>
+        <td md-cell ng-class="{ red:main.stock==stock.organization8 }">{{ stock.organization8 }}({{ stock.sell8/1000 }}万)</td>
+        <td md-cell ng-class="{ red:main.stock==stock.organization9 }">{{ stock.organization9 }}({{ stock.sell9/1000 }}万)</td>
+        <td md-cell ng-class="{ red:main.stock==stock.organization10 }">{{ stock.organization10 }}({{ stock.sell10/1000 }}万)</td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+
+</div>

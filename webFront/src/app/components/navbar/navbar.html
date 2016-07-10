@@ -1,0 +1,16 @@
+<nav class="navbar navbar-static-top navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand">
+        <span class="glyphicon glyphicon-home"></span> {{vm.title}}
+      </a>
+    </div>
+
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-6">
+      <ul class="nav navbar-nav">
+        <li ng-class="{ active:vm.currentName=='stock' }" ng-click="vm.click( 'stock' )" ><a href="javascript:;">股票</a></li>
+        <li ng-class="{ active:vm.currentName=='org' }" ng-click="vm.click( 'org' )" ><a href="javascript:;" >机构</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
