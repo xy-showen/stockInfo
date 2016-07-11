@@ -36,7 +36,7 @@
       <tbody md-body>
       <tr md-row ng-repeat="stock in main.finsStocks">
         <td md-cell>{{ stock.date }}</td>
-        <td md-cell ng-class="{ red:main.stock==stock.name }">{{ stock.name }}</td>
+        <td md-cell ng-class="{ red:( main.stock==stock.name || main.stock==stock.code ) }">{{ stock.name }}</td>
         <td md-cell ng-class="{ red:main.stock==stock.organization1 }">{{ stock.organization1 }}({{ stock.buy1/1000 }}万)</td>
         <td md-cell ng-class="{ red:main.stock==stock.organization2 }">{{ stock.organization2 }}({{ stock.buy2/1000 }}万)</td>
         <td md-cell ng-class="{ red:main.stock==stock.organization3 }">{{ stock.organization3 }}({{ stock.buy3/1000 }}万)</td>
